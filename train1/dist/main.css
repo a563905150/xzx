@@ -25,6 +25,9 @@ body {
     border: 1px solid #ffffff; }
   #nav_wrapper .minNav:hover {
     background-color: deepskyblue; }
+  #nav_wrapper .kobe {
+    height: 100%;
+    display: none; }
 
 .anotherNav {
   display: none; }
@@ -72,6 +75,7 @@ body {
   padding: 50px;
   background-color: #eeeeee;
   display: flex;
+  flex-wrap: wrap;
   width: 80%;
   margin: 0 auto; }
   .about .profile {
@@ -91,17 +95,16 @@ body {
         margin-left: 20px;
         background-color: blueviolet; }
   .about .avatar {
-    background: url("https://gss0.bdstatic.com/94o3dSag_xI4khGkpoWK1HF6hhy/baike/w%3D268%3Bg%3D0/sign=27a6723e4c2309f7e76faa144a356bce/9e3df8dcd100baa1a5fd20114d10b912c9fc2e42.jpg") no-repeat;
-    background-position: 120px 0;
     flex: 1;
     height: 500px; }
+    .about .avatar img {
+      margin: 0 auto;
+      display: block; }
     .about .avatar p {
+      margin: 0 auto;
+      margin-left: 26%;
       display: inline-block;
-      font-size: 20px;
-      position: relative;
-      left: 250px;
-      margin-left: -120px;
-      top: 415px; }
+      font-size: 20px; }
 
 .successful {
   padding: 50px;
@@ -129,7 +132,7 @@ body {
       border: 30px solid #fff; }
       .successful .item div img {
         cursor: pointer;
-        width: 300px;
+        width: 290px;
         height: 200px; }
       .successful .item div img:hover {
         border: 1px solid #ccc;
@@ -165,14 +168,19 @@ body {
     .more .header .contact .right {
       flex: 1;
       margin-top: 10px; }
-      .more .header .contact .right img {
-        margin-left: 25px;
-        border-radius: 50px;
-        width: 50px;
-        height: 50px;
-        border: 1px solid blueviolet; }
-      .more .header .contact .right img:hover {
-        border: 1px solid #ffffff; }
-  .more .footer {
-    margin-top: 40px;
+      .more .header .contact .right i {
+        border: 1px solid #ffffff;
+        padding: 5px;
+        border-radius: 50%;
+        cursor: pointer; }
+      .more .header .contact .right i:hover {
+        border: 1px solid #000; }
+
+.footer {
+  padding: 50px;
+  background-color: darkblue;
+  width: 80%;
+  margin: 0 auto;
+  color: #fff; }
+  .footer div {
     text-align: center; }
