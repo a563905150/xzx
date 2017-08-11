@@ -46,6 +46,7 @@ body{
     height: 100%;
     background-color: skyblue;
     .kobe_profile{
+        margin-left: 14px;
         display: flex;
         line-height: 100px;
         width: 50%;
@@ -125,39 +126,46 @@ body{
 .successful{
     padding: 50px;
     background-color: deepskyblue;
-    display: flex;
-    flex-direction: column;
+    //display: flex;
+    //flex-direction: column;
     width: 80%;
     margin:0 auto;
     color: #fff;
     .header{
         margin:0 auto;
         font-size: 30px;
+        div{
+            text-align: center;
+        }
         p{
-            margin-top: 20px;
-            width: 600%;
+            margin: 20px auto;
+            width: 80%;
             border: 4px solid #fff;
-            margin-left: -270%;
         }
     }
     .item{
         margin:20px auto;
-        display: flex;
         width: 100%;
-        flex-wrap: wrap;
-        div{
-            border-radius: 20px;
-            border: 30px solid #fff;
-            img{
-                cursor: pointer;
-                width: 290px;
-                height: 200px;
-            }
-            img:hover{
-                border: 1px solid #ccc;
-                box-sizing: border-box;
+        .item-wrapper{
+            display: inline-block;
+            margin: 0 auto;
+            div{
+                float: left;
+                border-radius: 20px;
+                margin: 5px;
+                border: 30px solid #fff;
+                img{
+                    cursor: pointer;
+                    width: 240px;
+                    height: 160px;
+                }
+                img:hover{
+                    border: 1px solid #ccc;
+                    box-sizing: border-box;
+                }
             }
         }
+
     }
 }
 .more{
@@ -185,16 +193,15 @@ body{
         .contact{
             display: flex;
             width: 100%;
+            flex-wrap: wrap;
             text-align: center;
             .left{
-                flex: 1;
                 font-size: 16px;
                 p{
                     margin: 10px auto;
                 }
             }
             .right{
-                flex:1;
                 margin-top: 10px;
                 i{
                     border: 1px solid #ffffff;

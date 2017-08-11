@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>个人作品集</title>
-     <!--<link href="dist/bootstrap.min.css" rel="stylesheet">-->
+     <link href="dist/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="dist/main.css" rel="stylesheet">
     <style>
@@ -26,6 +26,22 @@
             #nav_wrapper .kobe{
                 margin-left: 20px;
                 display: inline-block;
+            }
+        }
+        @media screen and (max-width: 1300px) {
+            .successful .item .item-wrapper{
+                padding-left: 120px;
+            }
+        }
+        @media screen and (max-width: 950px) {
+            .more .header .contact{
+                display: block;
+            }
+            .more .header .contact .left{
+                width: 50%;
+            }
+            .more .header .contact .right{
+                width: 50%;
             }
         }
     </style>
@@ -81,12 +97,14 @@
         <p></p>
     </div>
     <div class="item">
-        <div><img src="http://a1.hoopchina.com.cn/attachment/Day_090605/81_44117_ad1445e234e6d86.jpg" alt=""></div>
-        <div><img src="http://i7.hexunimg.cn/2016-04-15/183336625.jpg" alt=""></div>
-        <div><img src="http://img1.cache.netease.com/house/2016/4/14/201604141153468fe9c.jpg" alt=""></div>
-        <div><img src="http://06.imgmini.eastday.com/mobile/20170213/20170213094051_2454a4db4522895e0a34360578826a76_1.jpeg" alt=""></div>
-        <div><img src="http://pic.enorth.com.cn/0/04/53/16/4531663_913008.jpg" alt=""></div>
-        <div><img src="http://img14.3lian.com/201604/14/138c326aa4bf6a31bab04ef1551f06fb.jpg" alt=""></div>
+        <div class="item-wrapper">
+            <div><img src="http://a1.hoopchina.com.cn/attachment/Day_090605/81_44117_ad1445e234e6d86.jpg" alt=""></div>
+            <div><img src="http://i7.hexunimg.cn/2016-04-15/183336625.jpg" alt=""></div>
+            <div><img src="http://img1.cache.netease.com/house/2016/4/14/201604141153468fe9c.jpg" alt=""></div>
+            <div><img src="http://06.imgmini.eastday.com/mobile/20170213/20170213094051_2454a4db4522895e0a34360578826a76_1.jpeg" alt=""></div>
+            <div><img src="http://pic.enorth.com.cn/0/04/53/16/4531663_913008.jpg" alt=""></div>
+            <div><img src="http://img14.3lian.com/201604/14/138c326aa4bf6a31bab04ef1551f06fb.jpg" alt=""></div>
+        </div>
     </div>
 </div>
 <div id="c" class="more">
@@ -153,10 +171,10 @@
         $('.anotherNav').css('display','block');
 	});
     $(window).scroll(function () {
-    	if($(window).scrollTop()<700){
+    	if($(window).scrollTop()>=0&&$(window).scrollTop()<$('#b').offset().top){
 			$('.button div').removeClass('active');
             $('#aboutkobe').addClass('active');
-        }else if($(window).scrollTop()>=700&&$(window).scrollTop()<1000){
+        }else if($(window).scrollTop()>=$('#b').offset().top&&$(window).scrollTop()<$('#c').offset().top-300){
 			$('.button div').removeClass('active');
 			$('#successfulcase').addClass('active');
         }else{
